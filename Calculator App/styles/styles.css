@@ -1,0 +1,104 @@
+:root {
+  --bg-blue-light: hsl(222, 26%, 31%);
+  --bg-blue: hsl(223, 31%, 20%);
+  --bg-blue-dark: hsl(224, 36%, 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  color: white;
+}
+
+.calculator {
+  background-color: var(--bg-blue-light);
+  height: 100vh;
+  padding-block: 2rem;
+  width: 100%;
+  max-width: 650px;
+  margin-inline: auto;
+}
+
+.container {
+  margin-inline: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  font-size: 0.8rem;
+}
+
+.theme-number {
+  display: inline-block;
+  margin-inline-start: 1rem;
+}
+
+/* Main Section (Display) */
+.display {
+  background-color: var(--bg-blue-dark);
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  text-align: right;
+  border-radius: 10px;
+  height: 5rem;
+  overflow-y: hidden;
+  overflow: scroll;
+  direction: rtl;
+}
+
+/* buttons */
+
+.buttons {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: var(--bg-blue);
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1rem;
+  border-radius: 10px;
+}
+
+.btn {
+  /* Disable text selection */
+  -webkit-user-select: none; /* Safari */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none;
+
+  padding: 1.25rem 1rem;
+  text-align: center;
+  background-color: hsl(30, 25%, 89%);
+  color: var(--bg-blue-dark);
+  border-radius: 0.25rem;
+}
+
+.btn-blue {
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+}
+
+.btn-red {
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+}
+
+.reset-btn,
+.equal-btn {
+  grid-column: span 2;
+}
